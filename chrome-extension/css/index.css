@@ -1,0 +1,137 @@
+.BJ-background-class{
+    position: fixed;
+    left: 0;
+    top: 0;
+    right:0;
+    bottom: 0;
+    background: rgba(0,0,0,0.4);
+    z-index: 1000000;
+}
+.BJ-background-class .BJ-horizontal-line,
+.BJ-background-class .BJ-vertical-line{
+    position: absolute;
+    overflow: hidden;
+    display: flex;
+}
+.BJ-background-class .BJ-horizontal-line .BJ-rule,
+.BJ-background-class .BJ-vertical-line .BJ-rule{
+    display: flex;
+}
+.BJ-background-class .BJ-horizontal-line .BJ-rule-num,
+.BJ-background-class .BJ-vertical-line .BJ-rule-num{
+    position: absolute;
+    color: #fff;
+    font-size: 12px;
+    -moz-user-select: none; /*火狐*/
+    -webkit-user-select: none;  /*webkit浏览器*/
+    -ms-user-select: none;   /*IE10*/
+    -khtml-user-select: none; /*早期浏览器*/
+    user-select: none;
+}
+.BJ-background-class  .BJ-item{
+    position: absolute;
+    background: #4affff;
+    cursor: row-resize;
+}
+.BJ-background-class  .BJ-item.active{
+    background: #E74C3C;
+}
+/* .BJ-background-class .BJ-item.active.BJ-item-horizontal{
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+}
+.BJ-background-class .BJ-item.active.BJ-item-vertical{
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+} */
+.BJ-background-class .BJ-item.BJ-item-horizontal{
+    width: 100%;
+    height: 1px;
+}
+.BJ-background-class .BJ-item.BJ-item-vertical{
+    height: 100%;
+    width: 1px;
+}
+/* 水平 */
+.BJ-background-class .BJ-horizontal-line{
+    width: 100%;
+    height: 29px;
+    left: 0;
+    border-bottom: 1px solid #fff;
+    /* border-left: 1px solid #fff; */
+    flex-direction: row;
+}
+.BJ-background-class .BJ-horizontal-line .BJ-rule{
+    width: 100px;
+    position: relative;
+    height: 100%;
+    flex: 0 0 100px;
+    align-items: flex-end;
+}
+.BJ-background-class .BJ-horizontal-line .BJ-rule .BJ-rule-pre{
+    flex: 0 0 9px;
+    height: 5px;
+    border-right: 1px solid #fff;
+}
+.BJ-background-class .BJ-horizontal-line .BJ-rule .BJ-rule-pre.two{
+    height: 10px;
+}
+.BJ-background-class .BJ-horizontal-line .BJ-rule::after{
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    content: '';
+    display:block;
+    width: 1px;
+    right: 0;
+    margin-right: 0.5px;
+    background: #fff;
+}
+.BJ-background-class .BJ-horizontal-line .BJ-rule-num{
+    top: 2px;
+    left: 5px;
+}
+/* 垂直 */
+.BJ-background-class .BJ-vertical-line{
+    height: 100%;
+    width: 29px;
+    top: 0;
+    border-right: 1px solid #fff;
+    /* border-top: 1px solid #fff; */
+    flex-direction: column;
+}
+.BJ-background-class .BJ-vertical-line .BJ-rule{
+    width: 100%;
+    position: relative;
+    height: 100px;
+    flex: 0 0 100px;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.BJ-background-class .BJ-vertical-line .BJ-rule-num{
+    left: 4px;
+    top:2px;
+    width: 10px;
+    display:inline-block;
+    word-break: break-all;
+    line-height: 12px;
+}
+.BJ-background-class .BJ-vertical-line .BJ-rule .BJ-rule-pre{
+    flex: 0 0 9px;
+    width: 5px;
+    border-bottom: 1px solid #fff;
+}
+.BJ-background-class .BJ-vertical-line .BJ-rule .BJ-rule-pre.two{
+    width: 10px;
+}
+.BJ-background-class .BJ-vertical-line .BJ-rule::after{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    content: '';
+    display:block;
+    height: 1px;
+    right: 0;
+    margin-top: -0.5px;
+    background: #fff;
+}

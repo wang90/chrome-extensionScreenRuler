@@ -1,0 +1,18 @@
+{
+    "manifest_version":2,
+    "name":"chorme splice line",
+    "description":"this is a extion",
+    "version":"1.0",
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": true
+    },
+    "browser_action": {
+        "default_icon": "icon.png"
+    },
+    "permissions":[
+        "tabs",
+        "https://*/*",
+        "http://*/*"
+    ]
+}
