@@ -1,6 +1,5 @@
 README.md
-### chrome-extensionScreenRuler
-
+# chrome-extensionScreenRuler
 应用内容：利用chrome方便计算屏幕两天之间的尺寸大小   
 
 
